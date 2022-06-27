@@ -1,0 +1,95 @@
+.footer {
+  background-color: #302e2e;
+  color: white;
+}
+
+.footer * {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .head .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 3px 6px 5px #b97f7f;
+}
+
+.footer .head .smicons .smiconslist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .head .smicons .smiconslist li {
+  padding: 0px 10px;
+}
+
+.footer .head .smicons .smiconslist li:hover {
+  background-color: #f0f0f0;
+  color: black;
+  border-radius: 3px;
+}
+
+.footer .nav {
+  background-color: #272626;
+}
+
+.footer .nav .navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+}
+
+.footer .nav .navList li {
+  padding: 0px 7px;
+  margin: 0 5px;
+}
+
+.footer .nav .navList li:hover {
+  background-color: #e6e6e6;
+  color: black;
+  border-radius: 3px;
+}
+
+.footer .line {
+  border: 2px solid white;
+}
+
+.footer .bottom {
+  background-color: #272626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .bottom h6 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+/*# sourceMappingURL=footer.module.css.map */

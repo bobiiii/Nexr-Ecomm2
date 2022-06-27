@@ -1,0 +1,70 @@
+$bgclr1: rgb(48, 46, 46);
+$bgclr2: rgb(39, 38, 38);
+
+.footer {
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  background-color: $bgclr1;
+  color: white;
+  .head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-shadow: 3px 6px 5px rgb(185, 127, 127);
+    }
+    .smicons {
+      .smiconslist {
+        display: flex;
+
+        li {
+          padding: 0px 10px;
+          &:hover {
+            background-color: rgb(240, 240, 240);
+            color: black;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+  .nav {
+    background-color: $bgclr2;
+    .navList {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0px;
+      li {
+        padding: 0px 7px;
+        margin: 0 5px;
+
+        &:hover {
+          background-color: rgb(230, 230, 230);
+          color: black;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+  .line {
+    border: 2px solid rgb(255, 255, 255);
+  }
+  .bottom {
+    background-color: $bgclr2;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    h6 {
+      font-size: 1rem;
+      font-weight: 100;
+    }
+  }
+}

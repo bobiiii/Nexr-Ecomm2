@@ -1,0 +1,17 @@
+.cgheading {
+  background-color: #eff1f1;
+  color: black !important;
+}
+
+.cgheading h2 {
+  padding: 2px 20px;
+  font-weight: 500;
+}
+
+.cardbtn {
+  background-color: #ebde6b;
+  color: #2b2a2a;
+  font-weight: 500;
+  border: none;
+}
+/*# sourceMappingURL=cardgroup.module.css.map */

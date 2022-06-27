@@ -1,0 +1,21 @@
+.navbar {
+  background-color: rgb(224, 224, 224) !important;
+  box-shadow: 0px 1px 10px 2px rgb(165, 159, 159);
+  .logo {
+    text-shadow: 2px 5px 2px rgb(173, 184, 187);
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+
+  .linkColor {
+    color: black;
+    margin: 0px 2px;
+    padding: 5px 7px;
+    &:hover {
+      color: rgb(248, 248, 248) !important;
+      background-color: rgb(70, 69, 69);
+      border-radius: 5px;
+      transition: 600ms ease-in;
+    }
+  }
+}
