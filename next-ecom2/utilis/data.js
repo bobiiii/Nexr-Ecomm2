@@ -4,7 +4,7 @@ const data = {
       id: 1,
       category: 'Shirts',
       slug: 'item-1',
-       img: '/images/shirt1.jpg',
+      img: '/images/shirt1.jpg',
       title: 'Item 1',
       brand: 'Addidas',
       rating: 4.5,
