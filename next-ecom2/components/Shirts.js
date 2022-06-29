@@ -7,8 +7,9 @@ export default function Shirts(props) {
   const card = (shirts) => {
     return (
       <Card
+
         slug={shirts.slug}
-        key={shirts.id}
+        key={shirts._id}
         img={shirts.img}
         title={shirts.title}
         desc={shirts.desc}

@@ -5,13 +5,29 @@ import Layout from '../../components/Layout';
 import styles from '../../styles/cardgroup.module.css';
 import db from '../../utilis/db/db';
 import Product from '../../model/Product';
+import { useContext } from 'react';
+import {Store} from "../../utilis/Store"
+import axios from "axios"
+import {Badge} from "@mui/material"
 
 export default function Productslug(props) {
+  const { state, dispatch} = useContext(Store)
+  const {cart} = state
   const { product } = props;
 
   if (!product) {
     return <h1>Product not Found</h1>;
   }
+  const addToCartHandler = async ()=>{
+    const {data} = await axios.get(`/api/products/${product._id}`)
+    if (data.countInStock <= 0) {
+      window.alert("sorry. Item is out of stock")
+      return
+      
+    }
+    dispatch({type:"CART_ADD_ITEM", payload:{...product, quantity: 1}})
+  }
+  
   return (
     <>
       <Layout title={product.title} description={product.desc}>
@@ -55,8 +71,9 @@ export default function Productslug(props) {
                     <button
                       className={`btn btn-primary ${styles.cardbtn}`}
                       type="button"
-                    >
-                      Add To Cart
+                      onClick={addToCartHandler}
+                    >Add To Cart
+                      
                     </button>
                   </div>
                 </div>

@@ -2,7 +2,14 @@ import '../styles/navbar.module.css';
 import NextLink from 'next/link';
 import Link from 'next/link';
 import styles from '../styles/navbar.module.css';
+import {Badge} from "@mui/material"
+import {Store} from "../utilis/Store"
+import { useContext } from 'react';
+
+
 export default function Navbar() {
+  const {state} = useContext(Store)
+  const {cart} = state
   return (
     <nav className={`${styles.navbar} navbar sticky navbar-expand-lg bg-light`}>
       <div className="container-fluid">
@@ -22,26 +29,20 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
-            {/* <li className={`${styles.navItem} nav-item`}>
-              <a
-                className={`${styles.linkColor} nav-link active`}
-                aria-current="page"
-                href="#"
-              >
-                Products
-              </a>
-            </li>
-            <li className={`${styles.navItem} nav-item`}>
-              <a className={`${styles.linkColor} nav-link  `} href="#">
-                Cart
-              </a>
-            </li> */}
+           
             <NextLink
               href="/cart"
               passHref
               className={`${styles.navItem} nav-item`}
             >
-              <a className={`${styles.linkColor} nav-link `}>Cart</a>
+              <a className={`${styles.linkColor} nav-link `}>
+              {cart.cartItems.length > 0 ? <Badge
+                    color="primary"
+                     badgeContent={cart.cartItems.length}>
+                      CART
+                    </Badge> : "CART"}
+                
+                </a>
             </NextLink>
             <NextLink
               href="/login"
