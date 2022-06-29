@@ -10,7 +10,7 @@ export default function Card(shirts) {
         <div className="card rounded shadow">
           <Image
             src={img}
-            class="card-img-top"
+            className="card-img-top"
             alt="Shirt Image"
             layout="responsive"
             width={30}

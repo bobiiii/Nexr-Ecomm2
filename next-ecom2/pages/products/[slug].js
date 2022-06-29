@@ -1,14 +1,14 @@
 import Image from 'next/image';
 
-import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
-import data from '../../utilis/data';
-import styles from '../../styles/cardgroup.module.css';
 
-export default function Productslug() {
-  const router = useRouter();
-  const slug = router.query.slug;
-  const product = data.shirts.find((a) => a.slug === slug);
+import styles from '../../styles/cardgroup.module.css';
+import db from '../../utilis/db/db';
+import Product from '../../model/Product';
+
+export default function Productslug(props) {
+  const { product } = props;
+
   if (!product) {
     return <h1>Product not Found</h1>;
   }
@@ -67,4 +67,18 @@ export default function Productslug() {
       </Layout>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { params } = context;
+  const { slug } = params;
+
+  await db.connect();
+  const product = await Product.findOne({ slug }).lean();
+  await db.disconnect();
+  return {
+    props: {
+      product: db.convertDocToObj(product),
+    },
+  };
 }

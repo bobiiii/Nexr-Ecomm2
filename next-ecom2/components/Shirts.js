@@ -1,7 +1,9 @@
 import styles from '../styles/cardgroup.module.css';
-import data from '../utilis/data';
+
 import Card from './Card';
-export default function Shirts() {
+
+export default function Shirts(props) {
+  const { products } = props;
   const card = (shirts) => {
     return (
       <Card
@@ -20,7 +22,7 @@ export default function Shirts() {
         <h2> Shirts</h2>
       </div>
       <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
-        {data.shirts.map(card)}
+        {products.map(card)}
       </div>
     </>
   );
