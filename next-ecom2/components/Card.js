@@ -6,7 +6,7 @@ export default function Card(shirts) {
 
   return (
     <div className="col">
-      <Link href={`products/${slug}`} passHref>
+      <Link href={`/products/${slug}`} passHref>
         <div className="card rounded shadow">
           <Image
             src={img}
